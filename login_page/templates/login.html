@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .bg{
+            height: 100vh;
+             display: flex;
+            align-items: center;
+            justify-content: center; 
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
+
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            padding: 15px;
+            border: 2px solid #140624;
+            border-radius: 5px;
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #1e191f 0%, #2BD2FF 52%, #2BFF88 90%);
+
+        }
+        input{
+            margin: 5px 0px;
+            height: 35px;
+            padding: 7px;
+        }
+        .bg1{
+            text-align: center;
+            background-color: #d3bdff;
+            margin-top: 15px;
+
+        }
+        .btn{
+            height: 35px;
+            margin: 5px 0px;
+            background-color: rgb(182, 116, 199);
+            border: none;
+            border-radius: 3px;
+            color: #0b3a46;
+        }
+        .btn:hover{
+            background-color: #00b2f8;
+            color: rgb(119, 143, 153);
+        }
+        .head{
+            font-size: 23px;
+            font-style: italic;
+
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+        <h1 class="bg1"> LOGIN FORM</h1>
+    <div class="bg">
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="container">
+                <label for="user_name" class="head">User name </label> 
+                <input type="text" placeholder="Enter User Name" name="user_name">
+                <label for="password" class="head">Password </label> 
+                <input type="text" placeholder="Enter password" name="password">
+                <input type="submit" value="LOGIN" class="btn">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
